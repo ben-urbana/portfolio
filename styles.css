@@ -16,6 +16,7 @@ h1:hover{
 
 body {
 
+	transition:all 1s ease;
 	background: #1ac6ff;
 }
 .description{
@@ -25,6 +26,7 @@ body {
 	font-family: 'Acme', sans-serif;
 	transition:all 1s ease;
 	margin: auto;
+
 }
 
 .description:hover{
@@ -35,10 +37,67 @@ body {
 }
 .title{
 
+	font-family: 'Gloria Hallelujah', cursive;
 	margin-top: 100px;
 	text-align: center;
+	transition:all 2s ease;
+	background: #bfff80;
+}
+.title:hover{
+
+	box-shadow:
+                1px 1px #bfff80,
+                2px 2px #cc0088,
+                3px 3px #1a3300,
+                4px 4px #99ff33,
+                5px 5px #8cff1a;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
 }
 .doodle{
 
-	text-align: center;
+	transition:all .5s ease;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	border: 5px green ridge;
+	margin-top: 30px;
+}
+.doodle:hover{
+
+	-webkit-transform: rotateZ(-360deg);
+        -ms-transform: rotateZ(-360deg);
+        transform: rotateZ(-360deg);
+}
+
+@media only screen and (max-width: 500px) {
+
+body{
+
+	background-color: #660000;
+}
+
+
+.description{
+
+	color: #99ff99;
+}
+.doodle{
+
+	border: 5px #6666ff ridge;
+}
+.title{
+
+	color: #ff6666;
+}
+
+
+h1{
+
+	background: #003366;
+}
+
+
+
+
 }
