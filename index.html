@@ -7,8 +7,95 @@
 <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
 	<title>Portfolio</title>
+
+
+</style>
+<script>
+var x,y
+var step=20
+var doit=0
+var text="Art "
+text=text.split("")
+
+var xpos=new Array()
+for (i=0;i<=text.length-1;i++) {
+	xpos[i]=-50
+}
+
+var ypos=new Array()
+for (i=0;i<=text.length-1;i++) {
+	ypos[i]=-50
+}
+
+function anddo(e){
+	x = (document.layers) ? e.pageX : document.body.scrollLeft+event.clientX
+	y = (document.layers) ? e.pageY : document.body.scrollTop+event.clientY
+	doit=1
+}
+
+function trail() {
+	if (doit==1 && document.all) {
+    	for (i=text.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<text.length-1; i++) {
+    		var place = eval("span"+(i)+".style")
+    		place.posLeft=xpos[i]
+			place.posTop=ypos[i]
+    	}
+	}
+	
+	else if (doit==1 && document.layers) {
+    	for (i=text.length-1; i>=1; i--) {
+   			xpos[i]=xpos[i-1]+step
+			ypos[i]=ypos[i-1]
+    	}
+		xpos[0]=x+step
+		ypos[0]=y
+	
+		for (i=0; i<text.length-1; i++) {
+    		var place = eval("document.span"+i)
+    		place.left=xpos[i]
+			place.top=ypos[i]
+    	}
+	}
+		var timer=setTimeout("trail()",30)
+}
+
+</script>
+
+
+
+
+
+
+
 </head>
-<body>
+<body onLoad="trail()">
+
+
+<script>
+<!-- Beginning of JavaScript -
+
+for (i=0;i<=text.length-1;i++) {
+    document.write("<span id='span"+i+"' class='mouse'>")
+	document.write(text[i])
+    document.write("</span>")
+}
+
+if (document.layers){
+	document.captureEvents(Event.MOUSEMOVE);
+}
+document.onmousemove = anddo;
+
+// - End of JavaScript - -->
+</script>
+
+
 <h1>Welcome to my Portfolio</h1>
 <h2 class="description">About me</h2>
 <p class="description">I am an extremely successfull pro doodler. I've made over $1.5 billion selling my doodles. When I firsted started in middle school, they weren't very popular but over the years, they became very famous.</p>

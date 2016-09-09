@@ -18,6 +18,9 @@ body {
 
 	transition:all 1s ease;
 	background: #1ac6ff;
+	width:100%;
+overflow-x:hidden;
+overflow-y:scroll;
 }
 .description{
 
@@ -68,6 +71,16 @@ body {
 	-webkit-transform: rotateZ(-360deg);
         -ms-transform: rotateZ(-360deg);
         transform: rotateZ(-360deg);
+}
+
+.mouse 
+{
+position:absolute;
+visibility:visible;
+top:-50px;
+font-size:12px;
+font-family:comic sans ms;
+color:yellow;
 }
 
 @media only screen and (max-width: 500px) {
