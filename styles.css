@@ -19,8 +19,6 @@ body {
 	transition:all 1s ease;
 	background: #1ac6ff;
 	width:100%;
-overflow-x:hidden;
-overflow-y:scroll;
 }
 .description{
 
@@ -72,6 +70,19 @@ overflow-y:scroll;
         -ms-transform: rotateZ(-360deg);
         transform: rotateZ(-360deg);
 }
+.dood{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+transition:all 60s ease;
+
+}
+.dood:hover{
+	-webkit-transform: rotateZ(-36000deg);
+        -ms-transform: rotateZ(-36000deg);
+        transform: rotateZ(-36000deg);
+}
+}
 
 .mouse 
 {
@@ -110,7 +121,10 @@ h1{
 	background: #003366;
 }
 
-
+.dood{
+	height: 300px;
+	width: 300px;
+}
 
 
 }
