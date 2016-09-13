@@ -8,6 +8,7 @@ h1 {
 	transition:all 1s ease;
 	position: fixed;
 	width: 100%;
+	border: 5px black solid;
 }
 h1:hover{
 
