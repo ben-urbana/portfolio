@@ -80,6 +80,8 @@ body {
 	margin-left: auto;
 	border: 5px green ridge;
 	margin-top: 30px;
+	height: 500px;
+	width: 500px;
 }
 .doodle:hover{
 
@@ -114,6 +116,14 @@ color:yellow;
 }
 
 @media only screen and (max-width: 500px) {
+
+
+
+img {
+
+	height: 300px;
+	width: 300px;
+}
 
 body{
 
